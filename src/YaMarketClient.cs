@@ -8,11 +8,11 @@ using Apix.Sync.YaMarket.Client.Models;
 
 namespace Apix.Sync.YaMarket.Client
 {
-    public class KinopoiskClient : HttpClientBase
+    public class YaMarketClient : HttpClientBase
     {
         private UrlBuilder UrlBuilder => new UrlBuilder();
 
-        public KinopoiskClient(string baseUrl = null,ProxySettings proxy = null) : base(
+        public YaMarketClient(string baseUrl = null,ProxySettings proxy = null) : base(
             new Dictionary<string, string>()
             {
                 {"X-App-Version", "3.71"},
