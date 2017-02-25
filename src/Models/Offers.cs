@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Apix.Sync.YaMarket.Client.Models
+namespace Apix.Sync.YaMarket.Models
 {
     public class Region
     {

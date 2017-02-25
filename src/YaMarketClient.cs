@@ -4,9 +4,9 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Apix.Http.Client;
-using Apix.Sync.YaMarket.Client.Models;
+using Apix.Sync.YaMarket.Models;
 
-namespace Apix.Sync.YaMarket.Client
+namespace Apix.Sync.YaMarket
 {
     public class YaMarketClient : HttpClientBase
     {
