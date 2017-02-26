@@ -98,7 +98,7 @@ namespace Apix.Sync.YaMarket.Models
     public class Rating
     {
         [JsonProperty(PropertyName = "value")]
-        public int Value { get; set; }
+        public string Value { get; set; }
 
         [JsonProperty(PropertyName = "count")]
         public int Count { get; set; }
