@@ -19,6 +19,9 @@ namespace Apix.Sync.YaMarket.Models
     {
         [JsonProperty(PropertyName = "items")]
         public List<SearchItem> Items { get; set; }
+
+        [JsonProperty(PropertyName = "model")]
+        public SearchItem Model { get; set; }
     }
 
     public class SearchItem
