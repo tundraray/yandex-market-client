@@ -14,7 +14,7 @@ namespace Apix.Sync.YaMarket
 
         public string Offers(int id, int size =5)
         {
-            return string.Format("{0}{1}", apiUrl, string.Format(OffersUrl, Guid.NewGuid(), id, size));
+            return string.Format("{0}{1}", apiUrl, string.Format(OffersUrl, Guid.NewGuid().ToString("N"), id, size));
         }
 
     }

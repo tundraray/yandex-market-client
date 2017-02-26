@@ -12,7 +12,7 @@ namespace Apix.Sync.YaMarket
     {
         private UrlBuilder UrlBuilder => new UrlBuilder();
 
-        public YaMarketClient(string baseUrl = null,ProxySettings proxy = null) : base(
+        public YaMarketClient(ProxySettings proxy = null) : base(
             new Dictionary<string, string>()
             {
                 {"X-App-Version", "3.71"},
