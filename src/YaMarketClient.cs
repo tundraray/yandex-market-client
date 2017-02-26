@@ -35,7 +35,7 @@ namespace Apix.Sync.YaMarket
             return operationResult?.Offers;
         }
 
-        public async Task<List<SearchItem>> Search(string query, CancellationToken cancellationToken)
+        public async Task<Content> Search(string query, CancellationToken cancellationToken)
         {
             var operationResult = await HttpClient.GetAsync(UrlBuilder.Search(query),
 
@@ -44,7 +44,7 @@ namespace Apix.Sync.YaMarket
                     OnError = CommonBadResponse<SearchResult>
                 });
 
-            return operationResult?.Redirects?.Content?.Items;
+            return operationResult?.Redirects?.Content;
         }
 
         private Task<T> CommonBadResponse<T>(HttpResponseMessage response, CancellationToken cancellationToken)
