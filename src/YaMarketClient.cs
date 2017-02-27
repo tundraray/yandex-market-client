@@ -35,6 +35,18 @@ namespace Apix.Sync.YaMarket
             return operationResult?.Offers;
         }
 
+        public async Task<List<Offer>> ListOffers(int id, int count, string latitude, string longitude, CancellationToken cancellationToken)
+        {
+            var operationResult = await HttpClient.GetAsync(UrlBuilder.Offers(id, latitude, longitude),
+
+                requestParameters: new RequestParameters<OffersResult>
+                {
+                    OnError = CommonBadResponse<OffersResult>
+                });
+
+            return operationResult?.Offers;
+        }
+
         public async Task<Content> Search(string query, CancellationToken cancellationToken)
         {
             var operationResult = await HttpClient.GetAsync(UrlBuilder.Search(query),
