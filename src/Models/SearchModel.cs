@@ -33,6 +33,6 @@ namespace Apix.Sync.YaMarket.Models
         public string Name { get; set; }
 
         [JsonProperty(PropertyName = "id")]
-        public int Id { get; set; }
+        public string Id { get; set; }
     }
 }
